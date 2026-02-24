@@ -89,6 +89,4 @@ curl -X POST $BASE_URL/predict \
   -d '{"pclass": "invalid", "sex": "female", "age": "notanumber", "sibsp": 0, "parch": 0, "fare": 100, "embarked": "S"}'
 echo -e "\n"
 
-echo "========================================="
 echo "All tests completed!"
-echo "========================================="
