@@ -1,0 +1,9 @@
+Dataset size: 2000000
+
+Loop-based computation:
+Time: 3.6916 seconds
+Memory usage: 77.37 MB
+
+Vectorized computation:
+Time: 0.0063 seconds
+Memory usage: 15.26 MB

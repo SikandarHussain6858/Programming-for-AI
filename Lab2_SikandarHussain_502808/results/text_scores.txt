@@ -1,0 +1,7 @@
+TASK 2: Text Scoring Results
+==================================================
+Vocabulary: {'i': 0, 'love': 1, 'ai': 2, 'loves': 3, 'math': 4}
+
+"I love AI": 1.70
+"AI loves math": 2.10
+"I love math": 1.50

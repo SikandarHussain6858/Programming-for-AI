@@ -1,0 +1,8 @@
+TASK 1: Numerical Pipeline
+==================================================
+Loop-based standardization: 0.031558s
+Vectorized standardization: 0.000808s
+Speedup: 39.04x
+
+Shape flow: (8000, 3) -> (8000, 10)
+Test MSE: 0.010856
