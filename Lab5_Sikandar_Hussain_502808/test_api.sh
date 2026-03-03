@@ -1,8 +1,6 @@
 #!/bin/bash
 
-echo "========================================="
 echo "API Testing Suite"
-echo "========================================="
 echo ""
 
 BASE_URL="http://localhost:5000"

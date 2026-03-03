@@ -636,9 +636,9 @@ print(response.json())
 
 ## Requirements Compliance
 
-### CLO-3: Model Evaluation & Selection (3/3 Marks)
+### CLO-3: Model Evaluation & Selection 
 
-#### ✅ Model Evaluation Rigor (2/2)
+#### ✅ Model Evaluation Rigor 
 - Cross-validation: 5-fold CV implemented
 - Multiple metrics: Accuracy, Precision, Recall, F1, ROC-AUC, RMSE, R²
 - Mean + Standard Deviation reported for all models
@@ -646,7 +646,7 @@ print(response.json())
 
 **Evidence:** `classification_cv.py`, `regression_cv.py`
 
-#### ✅ Model Selection & Justification (1/1)
+#### ✅ Model Selection & Justification 
 - Selection based on stability (lowest std_dev: 0.0288)
 - Metric trade-offs discussed (ROC-AUC vs F1 vs computational cost)
 - Logistic Regression chosen for deployment
@@ -656,9 +656,9 @@ print(response.json())
 
 ---
 
-### CLO-4: Deployment & Operationalization (7/7 Marks)
+### CLO-4: Deployment & Operationalization 
 
-#### ✅ REST API Correctness (2/2)
+#### ✅ REST API Correctness 
 - Loads serialized model at startup
 - Accepts JSON input (single & batch)
 - Returns predictions with confidence scores
@@ -666,14 +666,14 @@ print(response.json())
 
 **Evidence:** `app.py` - Flask REST API with 3 endpoints
 
-#### ✅ Serialization & Inference (1/1)
+#### ✅ Serialization & Inference 
 - Entire pipeline serialized (preprocessing + model)
 - Includes: SimpleImputer, StandardScaler, OneHotEncoder, LogisticRegression
 - Reused correctly in API for consistent inference
 
 **Evidence:** `best_classifier.joblib`
 
-#### ✅ Dockerization (2/2)
+#### ✅ Dockerization 
 - Working Dockerfile with python:3.11-slim base
 - Correct dependencies in requirements.txt
 - Service runs inside container
@@ -682,7 +682,7 @@ print(response.json())
 
 **Evidence:** `Dockerfile`, `.dockerignore`
 
-#### ✅ Operational Readiness (1/1)
+#### ✅ Operational Readiness
 - Clear README with build & run instructions
 - API usage examples (curl & Python)
 - Requirements file with pinned versions
@@ -690,7 +690,7 @@ print(response.json())
 
 **Evidence:** This README + supporting files
 
-#### ✅ Reproducibility Discipline (1/1)
+#### ✅ Reproducibility Discipline 
 - `random_state=42` used in all models
 - Consistent train/test split (test_size=0.2, random_state=42)
 - Documented configuration
@@ -700,7 +700,6 @@ print(response.json())
 
 ---
 
-**TOTAL SCORE: 10/10 ✅**
 
 ---
 
