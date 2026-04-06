@@ -1,0 +1,10 @@
+{
+  "valid": {
+    "status_code": 200,
+    "response": "{\"student_name\":\"Sara Khan\",\"predicted_class\":1,\"scholarship_eligible\":true,\"message\":\"Student is likely eligible for scholarship.\"}"
+  },
+  "invalid_type": {
+    "status_code": 422,
+    "response": "{\"detail\":[{\"type\":\"float_parsing\",\"loc\":[\"body\",\"gpa\"],\"msg\":\"Input should be a valid number, unable to parse string as a number\",\"input\":\"high\"}]}"
+  }
+}
