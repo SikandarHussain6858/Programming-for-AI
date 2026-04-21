@@ -1,0 +1,68 @@
+Create Kubernetes Cluster 
+kind create cluster --name scholarship-cluster
+
+Then check:
+
+kubectl get nodes
+
+Create Pod 
+kubectl run scholarship-api --image=nginx
+
+Check:
+
+kubectl get pods
+
+Describe Pod
+kubectl describe pod scholarship-api
+
+
+Failure Test 
+kubectl delete pod scholarship-api
+Then:
+kubectl get pods
+Pod is gone
+
+Deployment 
+kubectl create deployment scholarship-api --image=nginx
+
+Scale:
+
+kubectl scale deployment scholarship-api --replicas=3
+Check:
+kubectl get pods
+
+Service (Networking)
+kubectl expose deployment scholarship-api --type=NodePort --port=80
+Check:
+kubectl get services
+
+Access Application
+kubectl port-forward svc/scholarship-api 8080:80
+Then open browser:
+http://localhost:8080
+
+
+
+Self-Healing Test
+
+Delete one pod:
+
+kubectl delete pod <pod-name>
+
+Then:
+
+kubectl get pods
+
+Scheduling Constraint
+kubectl get nodes
+Then:
+kubectl label nodes <node-name> gpu=true
+Run pod:
+kubectl run gpu-pod --image=nginx --overrides='
+{
+  "spec": {
+    "nodeSelector": {
+      "gpu": "true"
+    }
+  }
+}'
