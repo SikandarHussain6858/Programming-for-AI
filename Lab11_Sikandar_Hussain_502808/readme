@@ -1,0 +1,44 @@
+# Lab 11: MLOps Pipeline
+
+## 1. Pipeline Workflow
+
+Data → Preprocessing → Training → Evaluation → Deployment → Monitoring
+
+## 2. Tools Used
+
+- Python
+- MLflow
+- Scikit-learn
+
+## 3. Experiment Logging
+
+MLflow was used to log:
+- Parameters (model type, max_iter)
+- Metrics (accuracy)
+- Model artifacts
+
+## 4. Model Versioning
+
+Two versions were created:
+- Version 1: max_iter = 200
+- Version 2: max_iter = 100
+
+Each run in MLflow represents a new version.
+
+## 5. Best Model
+
+The model with higher accuracy was selected as the best model.
+
+## 6. Rollback Strategy
+
+If the new model performs worse:
+- Previous stable model is used
+- System switches back to older version
+- Performance is monitored
+
+## 7. Conclusion
+
+This lab demonstrated how MLflow helps in:
+- Tracking experiments
+- Managing model versions
+- Ensuring safe deployment using rollback

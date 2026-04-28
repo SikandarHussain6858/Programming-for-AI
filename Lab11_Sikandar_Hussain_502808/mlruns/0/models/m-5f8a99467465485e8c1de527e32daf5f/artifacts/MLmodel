@@ -1,0 +1,23 @@
+artifact_path: file:D:/code/PFAI/Lab11_Sikandar_Hussain_502808/mlruns/0/models/m-5f8a99467465485e8c1de527e32daf5f/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.11.1
+model_id: m-5f8a99467465485e8c1de527e32daf5f
+model_size_bytes: 850
+model_uuid: m-5f8a99467465485e8c1de527e32daf5f
+prompts: null
+run_id: b5b93c51a2be40d8a5bea2c38252281b
+utc_time_created: '2026-04-28 06:16:11.016885'
