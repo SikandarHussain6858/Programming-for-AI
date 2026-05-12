@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Data and Models
+# (Uncomment below if you don't want to track the generated dataset and models in Git)
+# data/
+# model/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
